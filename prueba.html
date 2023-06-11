@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Taylor Fest Mendoza</title>
+    <link rel="shortcut icon" href="logo.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="prueba.css">
+    <meta charset="utf-8"> <!--formato estándar para almacenar caracteres Unicode-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Admin\Downloads\bootstrap-5.3.0-dist\css">
+    <script src="C:\Users\Admin\Downloads\bootstrap-5.3.0-dist\js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=News Cycle">
+    <meta name= "keywords" content="arte,Taylor Swift,Musica">
+    <meta name= "description" content="Esta página está dedicada a fangirlear con las canciones y el universo de Taylor Swift>
+    <meta name= "author" content="Belén Humbert">
+    </head>
+
+    <header> <!--grupo de ayudas introductorias o de navegación-->
+        <a href="taylorswift.html" class="logo">
+            <img src="logo.jpg" alt="logo de la taylor">
+            <h2 class="logo-nombre">Taylor Fest Mendoza 2023</h2>
+        <nav>
+            <a href="taylorswift.html" class="nav-link">Inicio</a>
+            <a href="canciones/canciones.html" class="nav-link">Canciones</a>
+            <a href="discografia/discografia.html" class="nav-link">Sobre Ella</a>
+            <a href="Folklore/folklore.html" class="nav-link">Folklore</a>
+            <a href="playlist/playlist.html" class="nav-link">Playlist</a>
+        </nav>
+    </header>
+
+
+<body>
+    <br>
+    <div class="dropdown">
+    <button id= element-four>Menú de Consultas</button>
+    <div id="element-one" class="dropdown-content">
+      <P href="#" onClick="MostrarNombres()">Listado de Nombres</P>
+      <P href="#" onClick="MostrarDepartamentos()">Departamentos</P>
+      <p href="#" onClick="MostrarEdad()">Edades de las asistentes</p>
+      <p href="#" onClick="MostrarMovilidad()">Movilidad</p>
+      <P href="#" onClick="MostrarLavalle()">Lavalle</P>
+      <P href="#" onClick="MostrarSanmartin()">San Martin</P>
+      <p href="#" onClick="MostrarGuaymallen()">Guaymallen</p>
+      <p href="#" onClick="MostrarGodoycruz()">Godoy Cruz</p>
+      <p href="#" onClick="MostrarCiudad()">Ciudad</p>
+      <p href="#" onClick="MostrarLasheras()">Las Heras</p>
+      <p href="#" onClick="MostrarJunin()">Junin</p>
+      <p href="#" onClick="MostrarLujan()">Lujan</p>
+      <p href="#" onClick="MostrarMaipu()">Maipú</p>
+      <p href="#" onClick="MostrarAlvear()">General Alvear</p>
+      <p href="#" onClick="MostrarLaPaz()">La Paz</p>
+      <p href="#" onClick="MostrarMalargue()">Malargue</p>
+      <p href="#" onClick="MostrarRivadavia()">Rivadavia</p>
+      <p href="#" onClick="MostrarSanCarlos()">San Carlos</p>
+      <p href="#" onClick="MostrarSanRafael()">San Rafael</p>
+      <p href="#" onClick="MostrarSantaRosa()">Santa Rosa</p>
+      <p href="#" onClick="MostrarTunuyan()">Tunuyán</p>
+      <p href="#" onClick="MostrarTupungato()">Tupungato</p>
+    </div>
+    </div>
+  
+    <section>
+        <p id= "nombress"></p>
+    </section>
+  
+    <br>
+  
+    <button id="element-one" onclick = "listarTodo()">Lista:</button>
+    <div id="salida"></div>
+
+    <hr>
+        <p>
+            <label id="element-five">Odenar por edad:</label>
+            <button id="element-one" onclick="ascendente()">Ascendente</button>
+            &nbsp;&nbsp;&nbsp;
+            <button id="element-one" onclick="descendente()">Descendente</button>
+        </p>
+    <hr>
+        <p>
+            <input type=number id='nroElem'>
+            <button id="element-one" onclick = "eliminarUno()">Eliminar Registro</button>
+        </p>
+        
+    <hr>
+        
+        <p><label id="element-six">Nombre y Apellido:</label><input type='text' id='nombre'></p>
+        <p><label id="element-six">Departamento:</label><input type='text' id='departamento'></p>
+        <p><label id="element-six">Edad:</label><input type='number' id='edad'></p>
+        <p><input type='checkbox' name='movilidad' id='movilidad'><label id="element-six">Trafic</label></p>   
+        <button onclick= "agregar()"> Agregar </button>
+
+        <br><br><br>
+        
+        <div class="card" style="width: 18rem;">
+            <h5 class="card-title">The Eras Tour</h5>
+            <img src= tour.jpg class="card-img-top" width="300">
+            <div class="card-body">
+                <br>
+              <button id="element-one"a href="https://www.taylorswift.com/tour/" class="btn btn-primary">Conoce más info acá</button>
+            </div>
+          </div>
+    
+    <section class="buttons">
+      <a href="https://www.facebook.com/TaylorSwift" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/taylorswift/" class="fa fa-instagram"></a>
+      <a href="https://www.youtube.com/taylorswift" class="fa fa-youtube"></a>
+      <a href="https://www.taylorswift.com/" class="fa fa-user"></a>
+    </section>
+
+    </body> 
+
+        </html>
+        
+        <script>
+
+        //funciones de busqueda//
+        //.length es una propiedad de los arrays que muestra cuantos elementos hay en un array
+        var cadenacompleta= "";
+        var fila = "" ;
+ 
+        function MostrarNombres(){
+        console.log(nombres[0]);
+        for(var i=0; i < nombres.length; i++) {
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+}
+}
+        function MostrarDepartamentos(){
+        var cadenacompleta= "";
+        var fila = "" ;
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        fila =  nombres[i]+"-"+departamento[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+}
+}
+
+        function MostrarMovilidad(){
+        var cadenacompleta= "";
+        var fila = "" ;
+        console.log(movilidad[0]);
+        for(var i=0; i < movilidad.length; i++) {
+        fila =  nombres[i]+"-"+movilidad[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+}
+}
+
+        function MostrarEdad(){
+        var cadenacompleta= "";
+        var fila = "" ;
+        console.log(edades[0]);
+        for(var i=0; i < movilidad.length; i++) {
+        fila =  nombres[i]+"-"+edades[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+}
+}
+
+       
+        function MostrarLavalle(){ 
+        var cadenacompleta= "";
+        var fila = "" ;  
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Lavalle") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+        function MostrarSanmartin(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="San Martin") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarGodoycruz(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Godoy Cruz") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarGuaymallen(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Guaymallen") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarCiudad(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Ciudad") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarLasheras(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Las Heras") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarJunin(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Junin") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarLujan(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Lujan") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarMaipu(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Maipu") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarAlvear(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="General Alvear") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarLaPaz(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="La Paz") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarMalargue(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Malargue") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarRivadavia(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Rivadavia") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarSanCarlos(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="San Carlos") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarSanRafael(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="San Rafael") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarSantaRosa(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Santa Rosa") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarTunuyan(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Tunuyan") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        function MostrarTupungato(){
+        var cadenacompleta= "";
+        var fila = "" ;   
+        console.log(departamento[0]);
+        for(var i=0; i < departamento.length; i++) {
+        if(departamento[i]=="Tupungato") { 
+        fila =  nombres[i];
+        cadenacompleta = cadenacompleta + fila + "<br>";
+        document.getElementById("nombress").innerHTML = cadenacompleta;
+    }
+ 
+}
+}
+
+        //fin funciones departamentos//
+
+        //vectores//
+
+            //var nombres = ["Andrea Fernandez","Sol Sifuentes","Aldana Cáseres"];
+            //var departamento = ["Lavalle", "Lujan", "Junin",];
+            //var edades = [22,20,26];
+            //var movilidad = [true,false,true];
+
+        //vectores//
+        //parse acepta una cadena JSON como parámetro y devuelve el objeto JS correspondiente 
+
+        //inicia localStorage
+            
+            var this_nombres = localStorage.getItem("one_nombres");
+            if(this_nombres){
+                var nombres = JSON.parse(this_nombres);
+            }else{
+                var nombres = [];
+            }
+
+            var this_departamento = localStorage.getItem("one_departamento");
+            if(this_departamento){
+                var departamento = JSON.parse(this_departamento);
+            }else{
+                var departamento = [];
+            }
+ 
+            var this_edades = localStorage.getItem("one_edades");
+            if(this_edades){
+                var edades = JSON.parse(this_edades);
+            }else{
+                var edades = [];
+            }
+ 
+            var this_movilidad = localStorage.getItem("one_movilidad");
+            if(this_movilidad){
+                var movilidad = JSON.parse(this_movilidad);
+            }else{
+                var movilidad = [];
+            }
+
+        //termina localStorage
+
+
+
+            listarTodo();
+            
+            function listarTodo(){
+                str = "";
+                for(var i=0 ; i<nombres.length ; i++){
+                str = str + "<p>"+i+" - "+nombres[i]+" - "+departamento[i]+" - "+edades[i]+" - "+movilidad[i]+"</p>"
+                }
+                document.getElementById("salida").innerHTML = str;
+
+                localStorage.setItem("one_nombres",JSON.stringify(nombres));
+                localStorage.setItem("one_departamento",JSON.stringify(departamento));
+                localStorage.setItem("one_edades",JSON.stringify(edades));
+                localStorage.setItem("one_movilidad",JSON.stringify(movilidad));
+            }
+                
+
+            function eliminarUno(){
+                var paraEliminar = document.getElementById('nroElem').value;
+                nombres.splice(paraEliminar,1);
+                departamento.splice(paraEliminar,1);
+                edades.splice(paraEliminar,1);
+                movilidad.splice(paraEliminar,1);
+                listarTodo();
+            }
+
+            function eliminarTodos(){
+                var bool_eliminar = document.getElementsByName('laMovilidad');
+                console.log(bool_eliminar[0].checked);
+                var b_elim = bool_eliminar[0].checked;
+                for(var i=0 ; i<nombres.length ; i++){
+                    if(movilidad[i]== b_elim){
+                        nombres.splice(i,1);
+                        departamento.splice(i,1);
+                        edades.splice(i,1);
+                        movilidad.splice(i,1);
+                    }
+                }
+                listarTodo();
+            }
+
+            function agregar(){
+                var miNombre = document.getElementById('nombre').value;
+                var miDepartamento = document.getElementById('departamento').value;
+                var miEdad = document.getElementById('edad').value;
+                var miMovilidad = document.getElementsByName('movilidad')[0].checked;
+                
+                nombres.push(miNombre);
+                departamento.push(miDepartamento);
+                edades.push(miEdad);
+                movilidad.push(miMovilidad);
+                listarTodo();
+            }
+
+            function ascendente(){
+                var bandera,aux;
+                do{
+                    bandera = false;
+                    for(var i=0 ; i<nombres.length - 1 ; i++){
+                        if(edades[i]>edades[i+1]){
+                            console.log(edades[i]+" "+edades[i+1]);
+                            aux = edades[i];
+                            edades[i] = edades[i+1];
+                            edades[i+1]= aux;
+                            bandera = true;
+
+                            aux = nombres[i];
+                            nombres[i]= nombres[i+1];
+                            nombres[i+1]=aux;
+
+                            aux = departamento[i];
+                            departamento[i]= departamento[i+1];
+                            departamento[i+1]=aux;
+
+                            aux = movilidad[i];
+                            movilidad[i]= movilidad[i+1];
+                            movilidad[i+1]=aux;
+                        }
+                    }
+                }while(bandera);
+                listarTodo();
+            } 
+
+            function descendente(){
+                var bandera,aux;
+                do{
+                    bandera = false;
+                    for(var i=0 ; i<nombres.length - 1 ; i++){
+                        if(edades[i]<edades[i+1]){
+                            console.log(edades[i]+" "+edades[i+1]);
+                            aux = edades[i];
+                            edades[i] = edades[i+1];
+                            edades[i+1]= aux;
+                            bandera = true;
+
+                            aux = nombres[i];
+                            nombres[i]= nombres[i+1];
+                            nombres[i+1]=aux;
+
+                            aux = departamento[i];
+                            departamento[i]= departamento[i+1];
+                            departamento[i+1]=aux;
+
+                            aux = movilidad[i];
+                            movilidad[i]= movilidad[i+1];
+                            movilidad[i+1]=aux;
+                        }
+                    }
+                }while(bandera);
+                listarTodo();
+            } 
+        </script>
+</body>
+
